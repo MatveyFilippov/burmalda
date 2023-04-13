@@ -1,15 +1,13 @@
 # SAMOE KREATIVNOE
-> Рябков Александр (тестировщик)
->> realyoungwoody (GitHub)
 
-> Филиппов Матвей (тимлид)
->> [MatvteFilippov](https://github.com/MatvteFilippov "GitHub")
+> Филиппов Матвей (MatvteFilippov](https://github.com/MatvteFilippov "GitHub"))
+>> тимлид
 
-> Рябков Александр (разработчик)
->> [realyoungwoody](https://github.com/realyoungwoody "GitHub")
+> Рябков Александр ([realyoungwoody](https://github.com/realyoungwoody "GitHub"))
+>> разработчик
 
-> Калашникова Валерия (разработчик)
->> [ValeriaKalashnikova](https://github.com/ValeriaKalashnikova "GitHub")
+> Калашникова Валерия ([ValeriaKalashnikova](https://github.com/ValeriaKalashnikova "GitHub"))
+>> разработчик
 
-> Носова Алина (тестировщик)
->> [alinjia](https://github.com/alinjia "GitHub")
+> Носова Алина ([alinjia](https://github.com/alinjia "GitHub"))
+>> тестировщик
