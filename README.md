@@ -2,11 +2,14 @@
 > Рябков Александр (тестировщик)
 >> realyoungwoody (GitHub)
 
-> Филиппов Матвей (Тимлид)
->> MatvteFilippov 
+> Филиппов Матвей (тимлид)
+>> [MatvteFilippov] (https://github.com/MatvteFilippov "GitHub")
 
-> Рябков Александр (тестировщик)
+> Рябков Александр (разработчик)
 >> [realyoungwoody](https://github.com/realyoungwoody "GitHub")
 
->
->>
+> Калашникова Валерия (разработчик)
+>> [ValeriaKalashnikova](https://github.com/ValeriaKalashnikova "GitHub")
+
+> Носова Алина (тестировщик)
+>> [alinjia](https://github.com/alinjia "GitHub")
