@@ -12,7 +12,7 @@
 > Носова Алина ([alinjia](https://github.com/alinjia "GitHub"))
 >> тестировщик
 
-> Даша ...
+> Даша Чубарова ([chubarova2003](https://github.com/chubarova2003 "GitHub"))
 >> тестировщик
 
 # BURMALDA
