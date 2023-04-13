@@ -3,7 +3,7 @@
 >> realyoungwoody (GitHub)
 
 > Филиппов Матвей (тимлид)
->> [MatvteFilippov] (https://github.com/MatvteFilippov "GitHub")
+>> [MatvteFilippov](https://github.com/MatvteFilippov "GitHub")
 
 > Рябков Александр (разработчик)
 >> [realyoungwoody](https://github.com/realyoungwoody "GitHub")
