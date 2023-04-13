@@ -1,6 +1,6 @@
 # SAMOE KREATIVNOE
 
-> Филиппов Матвей (MatvteFilippov](https://github.com/MatvteFilippov "GitHub"))
+> Филиппов Матвей ([MatvteFilippov](https://github.com/MatvteFilippov "GitHub"))
 >> тимлид
 
 > Рябков Александр ([realyoungwoody](https://github.com/realyoungwoody "GitHub"))
