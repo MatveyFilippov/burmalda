@@ -1,4 +1,5 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=000000&lines=TO+DO+LIST:)](https://git.io/typing-svg)
+# TO DO LIST:
 ### ~~Сформулировать идею и наметить желаемый результат~~
 ### ~~Создать команду и распределить роли~~
 ### ~~Описать проект (ТЗ)~~
@@ -13,12 +14,10 @@
 ### Сделать игры
 ### Привести к красивому виду (сделать дизайн)
 ### Написать документацию кода
-
 ***
 ***
 ***
 ***
-
 # SAMOE KREATIVNOE
 
 > Филиппов Матвей ([MatvteyFilippov](https://github.com/MatvteFilippov "GitHub"))
