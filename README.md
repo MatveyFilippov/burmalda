@@ -1,5 +1,4 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=000000&lines=TO+DO+LIST:)](https://git.io/typing-svg)
-
 ### ~~Сформулировать идею и наметить желаемый результат~~
 ### ~~Создать команду и распределить роли~~
 ### ~~Описать проект (ТЗ)~~
