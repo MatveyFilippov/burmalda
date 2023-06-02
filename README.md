@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=000000&lines=TO+DO+LIST:)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=Добро+пожаловать!)](https://git.io/typing-svg)
 # TO DO LIST:
 ### ~~Сформулировать идею и наметить желаемый результат~~
 ### ~~Создать команду и распределить роли~~
