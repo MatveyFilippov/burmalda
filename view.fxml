@@ -11,14 +11,14 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #aeaeae;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="samoe_kreativnoe.burmolda.Controller">
    <children>
-      <AnchorPane fx:id="welcome" prefHeight="410.0" prefWidth="709.0" style="-fx-background-color: #9a9a9a;" visible="false">
+      <AnchorPane fx:id="welcome" prefHeight="410.0" prefWidth="709.0" style="-fx-background-color: #9a9a9a;">
          <children>
             <Label layoutX="107.0" prefHeight="79.0" prefWidth="496.0" text="Добро пожаловать в Burmolda!" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Apple Braille" size="34.0" />
                </font>
             </Label>
-            <Button layoutX="276.0" layoutY="210.0" mnemonicParsing="false" onAction="#look_in_bd" prefHeight="26.0" prefWidth="149.0" text="Войти" />
+            <Button layoutX="276.0" layoutY="210.0" mnemonicParsing="false" onAction="#go_enter" prefHeight="26.0" prefWidth="149.0" text="Войти" />
             <TextField fx:id="user_login" layoutX="234.0" layoutY="87.0" prefHeight="26.0" prefWidth="240.0" promptText="Введите логин" />
             <PasswordField fx:id="user_password" layoutX="234.0" layoutY="134.0" prefHeight="26.0" prefWidth="240.0" promptText="Введите пароль" />
             <Label fx:id="no_pas_log" layoutX="248.0" layoutY="177.0" prefHeight="17.0" prefWidth="213.0" textAlignment="CENTER" />
@@ -29,7 +29,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="home" layoutX="5.0" layoutY="5.0" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #9a9a9a;">
+      <AnchorPane fx:id="home" layoutX="5.0" layoutY="5.0" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #9a9a9a;" visible="false">
          <children>
             <Button layoutX="224.0" layoutY="188.0" mnemonicParsing="false" onAction="#play_mines" text="Мины" />
             <Button layoutX="411.0" layoutY="188.0" mnemonicParsing="false" onAction="#play_roll" text="Рулетка" />
