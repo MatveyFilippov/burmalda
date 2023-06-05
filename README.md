@@ -34,7 +34,7 @@
 > Носова Алина ([alinjia](https://github.com/alinjia "GitHub"))
 >> тестировщик
 
-> Даша Чубарова ([chubarova2003](https://github.com/chubarova2003 "GitHub"))
+> Чубарова Дарья ([chubarova2003](https://github.com/chubarova2003 "GitHub"))
 >> тестировщик
 
 # BURMALDA
