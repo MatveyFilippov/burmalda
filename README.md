@@ -1,6 +1,6 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&pause=1000&color=000000&width=435&lines=%D0%94%D0%BE%D0%B1%D1%80%D0%BE+%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D0%BE%D0%B2%D0%B0%D1%82%D1%8C!)](https://git.io/typing-svg)
 ***
-[Скачать проект с гугл диска]((https://drive.google.com/drive/folders/1yuuUnPj7ppO8EzPhVQ3M1yyy7d6fsrxC?usp=sharing) "burmalda")
+[Скачать проект с гугл диска](https://drive.google.com/drive/folders/1yuuUnPj7ppO8EzPhVQ3M1yyy7d6fsrxC?usp=sharing "burmalda")
 ***
 # TO DO LIST:
 ### ~~Сформулировать идею и наметить желаемый результат~~
