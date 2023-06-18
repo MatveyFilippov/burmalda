@@ -1,58 +1,293 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #aeaeae;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="samoe_kreativnoe.burmolda.Controller">
-   <children>
-      <AnchorPane fx:id="welcome" prefHeight="410.0" prefWidth="709.0" style="-fx-background-color: #9a9a9a;">
-         <children>
-            <Label layoutX="107.0" prefHeight="79.0" prefWidth="496.0" text="Добро пожаловать в Burmolda!" textAlignment="CENTER" textFill="WHITE">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="samoe_kreativnoe.burmalda.Controller">
+    <children>
+        <AnchorPane fx:id="welcome" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="700.0">
+            <children>
+            <ImageView fitHeight="415.0" fitWidth="719.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@enter_bur.png" />
+               </image>
+            </ImageView>
+                <Button layoutX="280.0" layoutY="295.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#go_enter" prefHeight="26.0" prefWidth="149.0" text="Войти" />
+                <TextField fx:id="user_login" layoutX="233.0" layoutY="173.0" prefHeight="26.0" prefWidth="240.0" promptText="Введите логин" />
+                <PasswordField fx:id="user_password" layoutX="233.0" layoutY="220.0" prefHeight="26.0" prefWidth="240.0" promptText="Введите пароль" />
+                <Label fx:id="no_pas_log" layoutX="258.0" layoutY="263.0" prefHeight="17.0" prefWidth="194.0" textAlignment="CENTER" textFill="#832121" />
+            <Button layoutX="503.0" layoutY="337.0" mnemonicParsing="false" onAction="#go_to_TGbot" prefHeight="26.0" prefWidth="156.0" text="Зарегестрироваться ↗️" />
+            <Label layoutX="475.0" layoutY="369.0" prefHeight="17.0" prefWidth="213.0" text="Нажимая, вы переходите по ссылке " textAlignment="CENTER" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #00ae91;" visible="false">
+            <children>
+                <MenuButton fx:id="profile_balance" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Профиль">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#go_to_TGbot" text="Пополнить баланс" />
+                        <MenuItem mnemonicParsing="false" onAction="#go_welcome" text="Выйти" />
+                        <MenuItem mnemonicParsing="false" onAction="#open_call_back" text="Обратная связь" />
+                    </items>
+                </MenuButton>
+            <Label fx:id="error_server" layoutX="259.0" layoutY="89.0" text="Ошибка! Нет связи с сервером(" textFill="#ab0000" visible="false" />
+            <Label layoutX="239.0" layoutY="40.0" text="Главное меню" textFill="#404040">
                <font>
-                  <Font name="Apple Braille" size="34.0" />
+                  <Font size="35.0" />
                </font>
             </Label>
-            <Button layoutX="276.0" layoutY="210.0" mnemonicParsing="false" onAction="#go_enter" prefHeight="26.0" prefWidth="149.0" text="Войти" />
-            <TextField fx:id="user_login" layoutX="234.0" layoutY="87.0" prefHeight="26.0" prefWidth="240.0" promptText="Введите логин" />
-            <PasswordField fx:id="user_password" layoutX="234.0" layoutY="134.0" prefHeight="26.0" prefWidth="240.0" promptText="Введите пароль" />
-            <Label fx:id="no_pas_log" layoutX="248.0" layoutY="177.0" prefHeight="17.0" prefWidth="213.0" textAlignment="CENTER" />
-            <Label layoutX="244.0" layoutY="279.0" prefHeight="79.0" prefWidth="220.0" text="Add_about_text" textAlignment="CENTER" textFill="#c3c3c3">
+            <ImageView fitHeight="118.0" fitWidth="118.0" layoutX="415.0" layoutY="141.0" onMouseClicked="#open_gall" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gall_bur.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="118.0" fitWidth="108.0" layoutX="185.0" layoutY="146.0" onMouseClicked="#open_mines" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@min_bur.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="mines_desk" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #8ebc75;" visible="false">
+            <children>
+            <Hyperlink fx:id="prof_min" layoutX="534.0" layoutY="177.0" onMouseClicked="#prof_res" text="Гарантия результата" textAlignment="CENTER" textFill="#6f62c3" underline="true" />
+            <Text fx:id="balance_in_mines" fill="#5b5959" layoutX="473.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Баланс:" textAlignment="CENTER" wrappingWidth="213.0528067282479" />
+            <Label layoutX="243.0" layoutY="54.0" text="Отгадай ячейку - получи выигрыш!" textAlignment="CENTER" textFill="#757575">
                <font>
-                  <Font name="Apple Braille" size="31.0" />
+                  <Font name="Apple Braille Outline 6 Dot" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="theme_mines" alignment="TOP_CENTER" layoutX="138.0" layoutY="19.0" prefHeight="34.0" prefWidth="426.0" text="Мины" textAlignment="CENTER">
+               <font>
+                  <Font name="Apple Braille Outline 6 Dot" size="28.0" />
+               </font>
+            </Label>
+            <Button layoutX="37.0" layoutY="28.0" mnemonicParsing="false" onAction="#open_mines" text="menu" />
+            <GridPane fx:id="grid_min" alignment="CENTER" disable="true" layoutX="204.0" layoutY="101.0" prefHeight="174.0" prefWidth="279.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.85516357421875" minWidth="10.0" prefWidth="56.435791015625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.9609375" minWidth="10.0" prefWidth="56.794708251953125" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.91558837890625" minWidth="10.0" prefWidth="54.576812744140625" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.91558837890625" minWidth="10.0" prefWidth="56.705291748046875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.1259460449219" minWidth="10.0" prefWidth="55.294708251953125" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="33.294708251953125" minHeight="10.0" prefHeight="33.294708251953125" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="40.30731201171875" minHeight="10.0" prefHeight="34.205291748046875" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="44.46095275878906" minHeight="10.0" prefHeight="35.0516357421875" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="52.98614501953125" minHeight="4.629730224609375" prefHeight="34.03904724121094" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="85.37026977539062" minHeight="10.0" prefHeight="38.09068298339844" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="1" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="4" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="3" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="2" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="3" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="4" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#click_mines" prefHeight="26.0" prefWidth="54.0" text="?" textOverrun="CENTER_WORD_ELLIPSIS" />
+               </children>
+            </GridPane>
+            <TextField fx:id="sum_on_what_play_min" alignment="CENTER" layoutX="151.0" layoutY="314.0" prefHeight="26.0" prefWidth="186.0" promptText="Введите ставку" />
+            <Button fx:id="st_btn_min" alignment="CENTER" layoutX="438.0" layoutY="314.0" mnemonicParsing="false" onAction="#min_start_stop" prefHeight="26.0" prefWidth="108.0" text="Начать игру" textAlignment="CENTER" textFill="#537520" />
+            <Label layoutX="37.0" layoutY="71.0" text="💣 💎">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <GridPane fx:id="grid_kef_min" layoutX="37.0" layoutY="113.0" prefHeight="150.0" prefWidth="68.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#switch_kef_min" prefHeight="26.0" prefWidth="70.0" text="1 / 24" />
+                  <Button mnemonicParsing="false" onAction="#switch_kef_min" prefHeight="26.0" prefWidth="70.0" text="6 / 19" GridPane.rowIndex="1" />
+                  <Button disable="true" mnemonicParsing="false" onAction="#switch_kef_min" prefHeight="22.0" prefWidth="70.0" text="12 / 13" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#switch_kef_min" prefHeight="22.0" prefWidth="70.0" text="18 /  7" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" onAction="#switch_kef_min" prefHeight="22.0" prefWidth="70.0" text="22 /  3" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="gall_desk" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #dbbc00;" visible="false">
+            <children>
+            <Text fx:id="balance_in_gall" fill="#5b5959" layoutX="503.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Баланс:" textAlignment="CENTER" wrappingWidth="183.0" />
+            <Label layoutX="247.0" layoutY="35.0" text="Отгадай слово - получи выигрыш!" textFill="#5b5b5b">
+               <font>
+                  <Font name="Apple Braille Outline 6 Dot" size="13.0" />
+               </font>
+            </Label>
+                <Label fx:id="theme_gall" alignment="TOP_CENTER" layoutX="138.0" layoutY="4.0" prefHeight="34.0" prefWidth="426.0" text="Виселица">
+               <font>
+                  <Font name="Apple Braille Outline 6 Dot" size="28.0" />
+               </font></Label>
+                <Button layoutX="38.0" layoutY="28.0" mnemonicParsing="false" onAction="#open_gall" text="menu" />
+            <AnchorPane fx:id="when_play_gall" layoutY="196.0" prefHeight="200.0" prefWidth="700.0" visible="false">
+               <children>
+                  <ToolBar layoutX="113.0" layoutY="66.0" prefHeight="42.0" prefWidth="471.0">
+                    <items>
+                        <Button layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Ё" />
+                        <Button layoutX="46.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Й" />
+                        <Button layoutX="167.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Ц" />
+                        <Button layoutX="202.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="У" />
+                        <Button layoutX="167.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="К" />
+                        <Button layoutX="202.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Е" />
+                        <Button layoutX="238.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Н" />
+                        <Button layoutX="273.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Г" />
+                        <Button layoutX="309.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Ш" />
+                        <Button layoutX="344.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Щ" />
+                        <Button layoutX="415.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="З" />
+                        <Button layoutX="451.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Х" />
+                        <Button layoutX="401.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Ъ" />
+                    </items>
+                  </ToolBar>
+                  <ToolBar layoutX="139.0" layoutY="106.0" prefHeight="40.0" prefWidth="400.0">
+                     <items>
+                        <Button layoutX="46.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Ф" />
+                        <Button layoutX="167.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Ы" />
+                        <Button layoutX="202.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="В" />
+                        <Button layoutX="167.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="А" />
+                        <Button layoutX="202.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="П" />
+                        <Button layoutX="238.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Р" />
+                        <Button layoutX="273.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="О" />
+                        <Button layoutX="309.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Л" />
+                        <Button layoutX="344.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Д" />
+                        <Button layoutX="415.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Ж" />
+                        <Button layoutX="451.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Э" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="175.0" layoutY="146.0" prefHeight="40.0" prefWidth="328.0">
+                     <items>
+                        <Button layoutX="46.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Я" />
+                        <Button layoutX="167.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Ч" />
+                        <Button layoutX="202.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="С" />
+                        <Button layoutX="167.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="М" />
+                        <Button layoutX="202.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="И" />
+                        <Button layoutX="238.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Т" />
+                        <Button layoutX="273.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Ь" />
+                        <Button layoutX="309.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Б" />
+                        <Button layoutX="344.0" layoutY="12.0" mnemonicParsing="false" onAction="#get_letter_gall" prefHeight="26.0" prefWidth="31.0" text="Ю" />
+                     </items>
+                  </ToolBar>
+                  <Button fx:id="close_btn_gall" layoutX="576.0" layoutY="113.0" mnemonicParsing="false" onAction="#gall_stop" prefHeight="26.0" prefWidth="88.0" text="СДАТЬСЯ" textFill="#a11c1c">
+                     <font>
+                        <Font name="Arial Black" size="10.0" />
+                     </font>
+                  </Button>
+                  <ProgressBar fx:id="progress_gall" layoutX="40.0" layoutY="136.0" prefHeight="20.0" prefWidth="51.0" progress="0.5" />
+                  <Label fx:id="word_gall" alignment="CENTER" layoutY="11.0" prefHeight="42.0" prefWidth="700.0" text="__ __ __ __" textAlignment="CENTER">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="bid2win_gall" fill="#5b5959" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-&gt;" textAlignment="CENTER" wrappingWidth="131.0" />
+                  <Hyperlink fx:id="prof_gall" layoutX="555.0" layoutY="155.0" onMouseClicked="#prof_res" text="Гарантия результата" textAlignment="CENTER" textFill="#6f62c3" underline="true" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="to_start_gall" layoutX="186.0" layoutY="248.0" prefHeight="99.0" prefWidth="328.0">
+               <children>
+                  <Button layoutX="43.0" layoutY="53.0" mnemonicParsing="false" onAction="#gall_175" text="x1.75" />
+                  <Button layoutX="241.0" layoutY="54.0" mnemonicParsing="false" onAction="#gall_35" text="x3.5" />
+                  <Label alignment="CENTER" layoutX="102.0" layoutY="58.0" text="Выберите коэфицент" />
+                  <TextField fx:id="sum_on_what_play_gall" alignment="TOP_CENTER" layoutX="84.0" layoutY="17.0" promptText="Введите сумму" />
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="ph_gall" fitHeight="139.0" fitWidth="140.0" layoutX="283.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gall_ph/gallow_0.png" />
+               </image></ImageView>
+            </children>
+        </AnchorPane>
+      <AnchorPane fx:id="message_back" layoutX="211.0" layoutY="59.0" prefHeight="260.0" prefWidth="279.0" style="-fx-background-color: #BDBDBD;" visible="false">
+         <children>
+            <TextArea fx:id="text_to_send_callback" prefHeight="200.0" prefWidth="279.0" promptText="Напишите что-нибудь)" />
+            <Button layoutX="34.0" layoutY="212.0" mnemonicParsing="false" onAction="#send_callback" prefHeight="26.0" prefWidth="88.0" text="Отправить" textFill="#70a83b" />
+            <Button layoutX="160.0" layoutY="212.0" mnemonicParsing="false" onAction="#open_call_back" prefHeight="26.0" prefWidth="88.0" text="Закрыть" textFill="#b93f3f" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="prof" layoutX="171.0" layoutY="67.0" prefHeight="244.0" prefWidth="359.0" style="-fx-background-color: #ab9f87;" visible="false">
+         <children>
+            <Label layoutX="63.0" layoutY="14.0" text="🔐Проверка честности">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="4.0" layoutY="42.0" prefHeight="15.0" prefWidth="353.0" text="Основана на технологии SHA256, такой же, как в блокчейне Bitcoin" textAlignment="CENTER" textFill="#4d4d4d">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="52.0" layoutY="200.0" prefHeight="30.0" prefWidth="256.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#close_prof" text="ОК" translateX="45.0" />
+                  <Button mnemonicParsing="false" onAction="#go_sha_gen" text="SHA-генератор↗️" translateX="5.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <Text fx:id="sha_in_proof" layoutX="7.0" layoutY="109.0" onMouseClicked="#copy_text" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="346.0" />
+            <Label layoutX="35.0" layoutY="57.0" prefHeight="15.0" prefWidth="292.0" text="В зашифрованном виде хранится заранее известный исход игры" textFill="#434242">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Text fx:id="de_sha_in_proof" layoutX="7.0" layoutY="177.0" onMouseClicked="#copy_text" strokeType="OUTSIDE" strokeWidth="0.0" text="будет известен в конце игры" textAlignment="CENTER" wrappingWidth="346.0" />
+            <Label layoutX="109.0" layoutY="146.0" text="КЛЮЧ ДЕШИФРОВКИ" textFill="#556f39">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="72.0" text="КЛЮЧ ШИФРОВКИ" textFill="#7c4141">
+               <font>
+                  <Font size="14.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="home" layoutX="5.0" layoutY="5.0" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #9a9a9a;" visible="false">
-         <children>
-            <Button layoutX="224.0" layoutY="188.0" mnemonicParsing="false" onAction="#play_mines" text="Мины" />
-            <Button layoutX="411.0" layoutY="188.0" mnemonicParsing="false" onAction="#play_roll" text="Рулетка" />
-            <MenuButton fx:id="profile_balance" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Профиль">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Пополнить баланс" />
-                <MenuItem mnemonicParsing="false" onAction="#go_welcome" text="Выйти" />
-                  <MenuItem mnemonicParsing="false" text="Обратная связь" />
-              </items>
-            </MenuButton>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="mines_desk" layoutX="-1.0" prefHeight="400.0" prefWidth="700.0" visible="false">
-         <children>
-            <Label layoutX="270.0" layoutY="200.0" prefHeight="17.0" prefWidth="162.0" text="Здесь_будет_игра_в_мины" />
-            <Button layoutX="326.0" layoutY="270.0" mnemonicParsing="false" onAction="#go_home_mines" text="home" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="roll_desk" prefHeight="410.0" prefWidth="709.0" visible="false">
-         <children>
-            <Label layoutX="261.0" layoutY="197.0" text="Здесь_будет_игра_в_рулетку" />
-            <Button layoutX="324.0" layoutY="265.0" mnemonicParsing="false" onAction="#go_home_roll" text="home" />
-         </children>
-      </AnchorPane>
-   </children>
+    </children>
 </AnchorPane>
