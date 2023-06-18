@@ -1,4 +1,4 @@
-[Скачать проект с гугл диска](https://drive.google.com/drive/folders/1yuuUnPj7ppO8EzPhVQ3M1yyy7d6fsrxC?usp=sharing "burmalda")
+[Скачать проект с гугл диска](https://drive.google.com/file/d/1CJiwJGOUa_ftL-35_ZA8dJa_o5dZIEyG/view?usp=sharing "burmalda")
 ***
 # TO DO LIST:
 ### ~~Сформулировать идею и наметить желаемый результат~~
