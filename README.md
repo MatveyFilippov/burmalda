@@ -1,4 +1,8 @@
-[Скачать проект с гугл диска](https://drive.google.com/file/d/1CJiwJGOUa_ftL-35_ZA8dJa_o5dZIEyG/view?usp=sharing "burmalda")
+### [Скачать проект с гугл диска](https://drive.google.com/file/d/1CJiwJGOUa_ftL-35_ZA8dJa_o5dZIEyG/view?usp=sharing "burmalda")
+##### Для теста игры можно использовать
+- Логин: test_akk
+- Пароль: 87654321
+##### Или создать свой аккаунт в нашем [тг боте](https://t.me/BurmaldaAutorizationBot "Авторизация")
 ***
 # TO DO LIST:
 ### ~~Сформулировать идею и наметить желаемый результат~~
