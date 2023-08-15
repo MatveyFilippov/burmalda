@@ -70,7 +70,10 @@ public class Controller {
         }
     }
     @FXML
-    void go_to_TGbot() throws URISyntaxException, IOException {Desktop.getDesktop().browse(new URI("https://t.me/BurmaldaAutorizationBot"));}
+    void go_to_TGbot() throws Exception {
+        Desktop.getDesktop().browse(new URI("https://t.me/BurmaldaAutorizationBot"));
+        Controll_helper.get_info_from_bd("https://burmalda.dvervevre.repl.co");
+    }
     @FXML
     void go_welcome() {Controll_helper.visable_pane(home, welcome);}
     @FXML
@@ -280,7 +283,9 @@ public class Controller {
     @FXML
     void close_prof(){prof.setVisible(false);}
     @FXML
-    void go_sha_gen()throws URISyntaxException, IOException {Desktop.getDesktop().browse(new URI("https://www.movable-type.co.uk/scripts/sha256.html"));}
+    void go_sha_gen()throws URISyntaxException, IOException {
+        Desktop.getDesktop().browse(new URI("https://www.movable-type.co.uk/scripts/sha256.html"));
+    }
 }
 
 
